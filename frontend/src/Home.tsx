@@ -1,17 +1,11 @@
-import LeftSideBar from "./sidebars/LeftSidebar";
-import RightSideBar from "./sidebars/RightSideBar";
+import Parallax from "./shopAndParalax/Parallax";
+import Shop from "./shopAndParalax/Shop";
 
 export default function Home() {
   return (
     <div className="homeContainer">
-      <div className="leftSideBar">
-        <LeftSideBar />
-      </div>
-
-      <div className="middle">Text</div>
-      <div className="rightSideBar">
-        <RightSideBar />
-      </div>
+      <Parallax />
+      {/* <Shop /> */}
     </div>
   );
 }
