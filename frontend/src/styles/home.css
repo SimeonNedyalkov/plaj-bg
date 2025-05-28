@@ -1,0 +1,25 @@
+.homeContainer {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.leftSideBar {
+  display: flex;
+  align-items: center;
+  width: 20%;
+  justify-content: center;
+}
+.rightSideBar {
+  display: flex;
+  align-items: center;
+  width: 20%;
+  justify-content: center;
+}
+.middle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+}
