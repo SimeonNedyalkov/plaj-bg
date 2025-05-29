@@ -1,4 +1,7 @@
 @import url("./base.css");
 @import url("./home.css");
 @import url("./navigation.css");
+@import url("./accountnavigation.css");
+@import url("./rightSideBar.css");
+@import url("./leftSideBar.css");
 @import "tailwindcss";

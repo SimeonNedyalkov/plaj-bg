@@ -2,15 +2,32 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./Home";
 import Navigation from "./Navigation";
 import Notifications from "./Notifications";
+import AccountNavigation from "./AccountNavigation";
+import { useEffect, useState } from "react";
+import Loader from "./Loader";
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading time
+    const timer = setTimeout(() => setLoading(false), 5000); // 5 seconds
+    return () => clearTimeout(timer);
+  }, []);
   return (
     <>
-      <Navigation />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/notifications" element={<Notifications />} />
-      </Routes>
+      {loading ? (
+        <Loader />
+      ) : (
+        <>
+          <Navigation />
+          <AccountNavigation />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/notifications" element={<Notifications />} />
+          </Routes>
+        </>
+      )}
     </>
   );
 }

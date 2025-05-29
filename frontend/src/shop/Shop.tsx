@@ -3,6 +3,7 @@ import BeanBagCanvas from "../threeD/BeanBagCanvas";
 export default function Shop() {
   return (
     <div>
+      <div className="Logo">Plaj.bg</div>
       <svg
         width="800"
         height="700"
@@ -19,6 +20,12 @@ export default function Shop() {
       </svg>
       <div className="beanBag">
         <BeanBagCanvas beanbagId={1} />
+      </div>
+      <div className="beanBagLabel">Gray Beanbag</div>
+      <div className="beanBagText">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
+        inventore atque et! Illum alias voluptatibus dignissimos modi impedit
+        non architecto veritatis?
       </div>
     </div>
   );

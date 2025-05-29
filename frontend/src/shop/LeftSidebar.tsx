@@ -1,3 +1,8 @@
 export default function LeftSideBar() {
-  return <div>LeftSideBar</div>;
+  return (
+    <div className="leftSideBarContainer">
+      <div className="leftSideBarTop">LeftSideBar</div>
+      <div className="leftSideBarBottom">LeftSideBar</div>
+    </div>
+  );
 }
