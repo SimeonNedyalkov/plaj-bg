@@ -17,7 +17,12 @@ export default function Home() {
           <RightSideBar />
         </div>
       </div>
-      <img src="/Sea_Transparent_PNG_Image.png" alt="" className="sea" />
+      <img
+        src="/Sea_Transparent_PNG_Image.png"
+        loading="lazy"
+        alt=""
+        className="sea"
+      />
       <img src="/Seagull_PNG_Clip_Art_Image.png" alt="" className="seagull" />
     </div>
   );

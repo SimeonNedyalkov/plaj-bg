@@ -1,8 +1,8 @@
-import classic from "../../public/beanbagTypes/5519940.png";
-import teardrop from "../../public/beanbagTypes/1698704.png";
-import lounger from "../../public/beanbagTypes/Bean-Bag-PNG-Image-Background-1.png";
-import pillow from "../../public/beanbagTypes/image_processing20210105-31893-12prs86.png";
-import kids from "../../public/beanbagTypes/kids.png";
+import classic from "/beanbagTypes/5519940.png";
+import teardrop from "/beanbagTypes/1698704.png";
+import lounger from "/beanbagTypes/Bean-Bag-PNG-Image-Background-1.png";
+import pillow from "/beanbagTypes/image_processing20210105-31893-12prs86.png";
+import kids from "/beanbagTypes/kids.png";
 
 export const arrayWithBeanBagTypes = [
   {

@@ -5,29 +5,60 @@ import Notifications from "./Notifications";
 import AccountNavigation from "./AccountNavigation";
 import { useEffect, useState } from "react";
 import Loader from "./Loader";
-
+import { motion, AnimatePresence } from "framer-motion";
 function App() {
   const [loading, setLoading] = useState(true);
-
+  const [loadingDone, setLoadingDone] = useState(false);
   useEffect(() => {
-    // Simulate loading time
-    const timer = setTimeout(() => setLoading(false), 2000); // 5 seconds
+    const timer = setTimeout(() => {
+      setLoading(false);
+      setLoadingDone(true);
+    }, 4000);
     return () => clearTimeout(timer);
   }, []);
+
   return (
     <>
-      {loading ? (
-        <Loader />
-      ) : (
-        <>
-          <Navigation />
-          <AccountNavigation />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/notifications" element={<Notifications />} />
-          </Routes>
-        </>
-      )}
+      <AnimatePresence mode="wait">
+        {loading ? (
+          <Loader />
+        ) : (
+          <>
+            {loadingDone && (
+              <>
+                {/* <motion.div
+                  key="location.pathname"
+                  className="slide-in"
+                  initial={{ scaleY: 0 }}
+                  animate={{ scaleY: 0 }}
+                  exit={{ scaleY: 1 }}
+                  transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+                > */}
+                <motion.div
+                  key="location.pathname"
+                  className="slide-out"
+                  initial={{ scaleY: 0 }}
+                  animate={{ scaleY: 1 }}
+                  exit={{ scaleY: 0 }}
+                  transition={{
+                    duration: 1,
+
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
+                >
+                  <Navigation />
+                  <AccountNavigation />
+                  <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/notifications" element={<Notifications />} />
+                  </Routes>
+                </motion.div>
+                {/* </motion.div> */}
+              </>
+            )}
+          </>
+        )}
+      </AnimatePresence>
     </>
   );
 }

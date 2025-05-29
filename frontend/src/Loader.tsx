@@ -17,8 +17,8 @@ export default function Loader() {
   }, []);
 
   return (
-    <div className="w-screen h-screen flex items-center justify-center bg-blue-100">
-      <div className="relative w-64 h-64">
+    <div className="bg-blue-100">
+      <div className="relative">
         {Array.from({ length: birdCount }).map((_, i) => {
           const angle = (i / birdCount) * 2 * Math.PI;
           const x = Math.cos(angle) * radius;
