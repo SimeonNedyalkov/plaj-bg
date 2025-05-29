@@ -1,6 +1,6 @@
-import LeftSideBar from "./shopAndParalax/LeftSidebar";
-import RightSideBar from "./shopAndParalax/RightSideBar";
-import Shop from "./shopAndParalax/Shop";
+import LeftSideBar from "./shop/LeftSidebar";
+import RightSideBar from "./shop/RightSideBar";
+import Shop from "./shop/Shop";
 
 export default function Home() {
   return (

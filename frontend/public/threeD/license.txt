@@ -1,0 +1,11 @@
+Model Information:
+* title:	Bean Bag Chair
+* source:	https://sketchfab.com/3d-models/bean-bag-chair-a79f9f5d8cff4bf9bea23bf72e7b9427
+* author:	Twisty_z (https://sketchfab.com/Twisty_z)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Bean Bag Chair" (https://sketchfab.com/3d-models/bean-bag-chair-a79f9f5d8cff4bf9bea23bf72e7b9427) by Twisty_z (https://sketchfab.com/Twisty_z) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

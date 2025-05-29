@@ -68,7 +68,7 @@ html {
 }
 .sea {
   position: absolute;
-  top: 0;
+  top: -230px;
   z-index: -2;
 }
 .sand {
@@ -82,4 +82,17 @@ html {
   z-index: -1;
   width: 20%;
   height: 20%;
+}
+.my-svg {
+  fill-opacity: 0.1;
+  stroke-width: 0.1rem;
+  z-index: 3;
+}
+.beanBag {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 100;
+  width: 50%;
+  cursor: pointer;
 }

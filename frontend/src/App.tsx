@@ -1,11 +1,16 @@
+import { Route, Routes } from "react-router-dom";
 import Home from "./Home";
 import Navigation from "./Navigation";
+import Notifications from "./Notifications";
 
 function App() {
   return (
     <div>
       <Navigation />
-      <Home />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/notifications" element={<Notifications />} />
+      </Routes>
     </div>
   );
 }
