@@ -7,12 +7,13 @@
 }
 .leftSideBarTop {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: flex-end;
   height: 50%;
-  justify-content: center;
-  box-sizing: border-box;
+  padding-bottom: 2rem;
+  position: relative;
   border: 2px solid white;
-  z-index: 2;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 2rem;
 }
@@ -62,4 +63,40 @@
   display: flex;
   align-items: center;
   gap: 2rem;
+}
+.colorArc {
+  position: absolute;
+  top: 4rem;
+  display: flex;
+  gap: 0.75rem;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.colorDot {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.colorDot:hover {
+  transform: scale(1.2);
+}
+
+.selectedColorCircle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin: 1rem;
+}
+.colorArcText {
+  padding: 1rem;
+  font-size: 1rem;
+  text-align: end;
+  color: white;
 }
