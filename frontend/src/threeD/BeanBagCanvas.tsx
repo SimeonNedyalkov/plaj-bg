@@ -9,13 +9,13 @@ type BeanBagCanvasProps = {
 
 export default function BeanBagCanvas({ beanbagId }: BeanBagCanvasProps) {
   return (
-    <Canvas>
+    <Canvas style={{ width: "100%", height: "100%" }}>
       <Suspense fallback="...loading">
         <Stage environment="night" intensity={0.5}>
           <BeanBag />
         </Stage>
-        <OrbitControls enableZoom={false}></OrbitControls>
-        <PerspectiveCamera position={[-5, 0, 1]} zoom={0.8} makeDefault />
+        <OrbitControls enableZoom={false} />
+        <PerspectiveCamera position={[0, 0, 5]} makeDefault />
       </Suspense>
     </Canvas>
   );

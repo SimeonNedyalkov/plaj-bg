@@ -6,14 +6,6 @@ html {
   position: relative;
   overflow: hidden;
   background-color: #f4a460;
-  z-index: -3;
-}
-
-.homeContainer::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
 }
 
 .shopContainer {
@@ -25,7 +17,7 @@ html {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  z-index: 0;
+  z-index: 1;
 }
 .shopContainer::before {
   content: "";
@@ -45,7 +37,7 @@ html {
   justify-content: center;
   box-sizing: border-box;
   border: 1px solid black;
-  z-index: 1;
+  z-index: 2;
 }
 .rightSideBar {
   display: flex;
@@ -55,44 +47,51 @@ html {
   justify-content: center;
   box-sizing: border-box;
   border: 1px solid black;
-  z-index: 1;
+  z-index: 2;
 }
 .middleWrapper {
   display: flex;
   align-items: center;
   height: 97%;
   width: 50%;
+  z-index: 2;
 }
-.rectangle {
-  width: 90%;
-}
+
 .sea {
   position: absolute;
   top: -230px;
-  z-index: -2;
+  z-index: 1;
 }
-.sand {
-  position: absolute;
-  bottom: 0;
-  z-index: -1;
-}
+
 .seagull {
   position: absolute;
   top: 0;
-  z-index: -1;
+  z-index: 1;
   width: 20%;
   height: 20%;
 }
 .my-svg {
   fill-opacity: 0.1;
   stroke-width: 0.1rem;
-  z-index: 3;
+  z-index: 1;
 }
 .beanBag {
   position: absolute;
   top: 0;
-  bottom: 0;
-  z-index: 100;
-  width: 50%;
-  cursor: pointer;
+  bottom: 20rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100 !important;
+  width: 30%;
+  height: 100%;
+  cursor: grabbing;
+}
+.beanBag:active {
+  cursor: grabbing;
+}
+.my-svg,
+.sea,
+.seagull,
+.sand {
+  pointer-events: none;
 }

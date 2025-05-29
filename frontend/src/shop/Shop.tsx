@@ -19,7 +19,7 @@ export default function Shop() {
       </svg>
       <div className="beanBag">
         <BeanBagCanvas beanbagId={1} />
-      </div>{" "}
+      </div>
     </div>
   );
 }
