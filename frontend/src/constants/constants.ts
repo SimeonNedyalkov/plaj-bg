@@ -5,7 +5,15 @@ import pillow from "../../public/beanbagTypes/image_processing20210105-31893-12p
 import kids from "../../public/beanbagTypes/kids.png";
 
 export const arrayWithBeanBagTypes = [
-  { type: "Classic", img: classic },
+  {
+    type: "Classic",
+    img: classic,
+    dimentions: { width: 100, height: 70 },
+    volume: "380 L",
+    weight: "3-4 kgs",
+    placeTaken: "1 m²",
+    weightSupport: "150 kgs",
+  },
   { type: "Teardrop", img: teardrop },
   { type: "Lounger", img: lounger },
   { type: "Pillow", img: pillow },
