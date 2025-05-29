@@ -2,9 +2,20 @@ html {
   scroll-behavior: smooth;
 }
 
-/* .homeContainer {
+.homeContainer {
+  position: relative;
   overflow: hidden;
-} */
+  background-color: #f4a460;
+  z-index: -3;
+}
+
+.homeContainer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
 .shopContainer {
   width: 100vw;
   height: 100vh;
@@ -54,4 +65,21 @@ html {
 }
 .rectangle {
   width: 90%;
+}
+.sea {
+  position: absolute;
+  top: 0;
+  z-index: -2;
+}
+.sand {
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+}
+.seagull {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  width: 20%;
+  height: 20%;
 }
