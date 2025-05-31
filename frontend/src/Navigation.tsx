@@ -1,9 +1,13 @@
 import { IoHomeOutline } from "react-icons/io5";
-import { CiShoppingCart } from "react-icons/ci";
-import { CiUser } from "react-icons/ci";
-import { CiSettings } from "react-icons/ci";
+import { IoHome } from "react-icons/io5";
+
+import { IoCartOutline } from "react-icons/io5";
+import { HiOutlineUser } from "react-icons/hi2";
+import { HiUser } from "react-icons/hi2";
+import { IoSettingsOutline } from "react-icons/io5";
+import { IoSettings } from "react-icons/io5";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useCart } from "./Cart/CartProvider";
 
 export default function Navigation() {
@@ -11,15 +15,20 @@ export default function Navigation() {
   return (
     <nav className="navigation">
       <div className="navContainer">
-        <Link to="/">
-          <IoHomeOutline />
-        </Link>
+        <NavLink to="/" end>
+          {({ isActive }) => (isActive ? <IoHome /> : <IoHomeOutline />)}
+        </NavLink>
         <button style={{ zIndex: 100, cursor: "pointer" }} onClick={openCart}>
-          <CiShoppingCart />
+          <IoCartOutline />
         </button>
-
-        <CiUser />
-        <CiSettings />
+        <NavLink to="/userSettings">
+          {({ isActive }) => (isActive ? <HiUser /> : <HiOutlineUser />)}
+        </NavLink>
+        <NavLink to="/settings">
+          {({ isActive }) =>
+            isActive ? <IoSettings /> : <IoSettingsOutline />
+          }
+        </NavLink>
         <RxHamburgerMenu />
       </div>
     </nav>

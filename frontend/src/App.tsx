@@ -6,6 +6,8 @@ import { useEffect, useState } from "react";
 import Loader from "./Loader";
 import { motion, AnimatePresence } from "framer-motion";
 import Cart from "./Cart/Cart";
+import UserSettings from "./User/UserSettings";
+import Settings from "./Settings";
 function App() {
   const [loading, setLoading] = useState(true);
   const [loadingDone, setLoadingDone] = useState(false);
@@ -51,6 +53,8 @@ function App() {
                   <Cart />
                   <Routes>
                     <Route path="/" element={<Home />} />
+                    <Route path="/userSettings" element={<UserSettings />} />
+                    <Route path="/settings" element={<Settings />} />
                   </Routes>
                 </motion.div>
                 {/* </motion.div> */}
