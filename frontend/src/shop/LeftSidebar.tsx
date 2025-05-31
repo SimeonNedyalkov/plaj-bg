@@ -1,4 +1,7 @@
-import { arrayWithBeanBagTypes } from "@/constants/constants";
+import {
+  arrayWithBeanBagTypes,
+  arrayWithTypesToSell,
+} from "@/constants/constants";
 import { GrCapacity } from "react-icons/gr";
 import { LuWeight } from "react-icons/lu";
 import { GrStatusPlaceholder } from "react-icons/gr";
@@ -30,23 +33,16 @@ export default function LeftSideBar() {
   return (
     <div className="leftSideBarContainer">
       <div className="leftSideBarTop">
-        <div className="colorArc">
-          {availableColors.map((color) => (
-            <div
-              key={color}
-              className="colorDot"
-              style={{ backgroundColor: color }}
-              onClick={() => setSelectedColor(color)}
+        {arrayWithTypesToSell.map((item) => (
+          <div className="singleBB" key={item.type}>
+            <div>{item.type}</div>
+            <img
+              src={item.img}
+              style={{ width: "70px", height: "70px" }}
+              alt=""
             />
-          ))}
-        </div>
-        <div
-          className="selectedColorCircle"
-          style={{ backgroundColor: selectedColor }}
-        />
-        <div className="colorArcText">
-          Here you can select the color of your Bean Bag !
-        </div>
+          </div>
+        ))}
       </div>
       <div className="leftSideBarBottom">
         <div className="beanBagStats">

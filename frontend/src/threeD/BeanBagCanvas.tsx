@@ -9,7 +9,7 @@ type BeanBagCanvasProps = {
 
 export default function BeanBagCanvas({ beanbagId }: BeanBagCanvasProps) {
   return (
-    <Canvas style={{ width: "100%", height: "100%" }}>
+    <Canvas style={{ width: "80%", height: "80%", cursor: "grabbing" }}>
       <Suspense fallback="...loading">
         <Stage environment="night" intensity={0.5}>
           <BeanBag />

@@ -1,13 +1,7 @@
-import { useEffect, useState } from "react";
 import BeanBagCanvas from "../threeD/BeanBagCanvas";
+import { Button } from "@chakra-ui/react";
 
 export default function Shop() {
-  const [loading, setIsLoading] = useState(false);
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(true);
-    }, 3000);
-  }, []);
   return (
     <div>
       <div className="Logo">Plaj.bg</div>
@@ -26,7 +20,7 @@ export default function Shop() {
         />
       </svg>
       <div className="beanBag">
-        {loading == true && <BeanBagCanvas beanbagId={1} />}
+        <BeanBagCanvas beanbagId={1} />
       </div>
       <div className="beanBagLabel">Gray Beanbag</div>
       <div className="beanBagText">
@@ -34,6 +28,13 @@ export default function Shop() {
         inventore atque et! Illum alias voluptatibus dignissimos modi impedit
         non architecto veritatis?
       </div>
+      <Button
+        colorPalette={"cyan"}
+        variant={"surface"}
+        className="beanBagButton"
+      >
+        Get now
+      </Button>
     </div>
   );
 }
