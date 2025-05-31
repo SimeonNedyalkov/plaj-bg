@@ -1,11 +1,11 @@
 import { Route, Routes } from "react-router-dom";
 import Home from "./Home";
 import Navigation from "./Navigation";
-import Notifications from "./Notifications";
 import AccountNavigation from "./AccountNavigation";
 import { useEffect, useState } from "react";
 import Loader from "./Loader";
 import { motion, AnimatePresence } from "framer-motion";
+import Cart from "./Cart/Cart";
 function App() {
   const [loading, setLoading] = useState(true);
   const [loadingDone, setLoadingDone] = useState(false);
@@ -48,9 +48,9 @@ function App() {
                 >
                   <Navigation />
                   <AccountNavigation />
+                  <Cart />
                   <Routes>
                     <Route path="/" element={<Home />} />
-                    <Route path="/notifications" element={<Notifications />} />
                   </Routes>
                 </motion.div>
                 {/* </motion.div> */}
