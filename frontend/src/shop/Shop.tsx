@@ -29,7 +29,7 @@ export default function Shop() {
         non architecto veritatis?
       </div>
       <Button
-        colorPalette={"cyan"}
+        colorPalette={"orange"}
         variant={"surface"}
         className="beanBagButton"
       >

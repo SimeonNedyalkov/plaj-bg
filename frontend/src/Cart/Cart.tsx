@@ -27,18 +27,29 @@ export default function Cart() {
             exit={{ x: "100%" }}
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
           >
-            <div className="flex justify-between items-center mb-4">
-              <h2 className="text-xl font-semibold">Your Cart</h2>
-              <button onClick={closeCart}>
-                <X className="w-5 h-5" />
-              </button>
+            <button onClick={closeCart}>
+              <X className="xButton" />
+            </button>
+            <div className="orderSummaryContainer">
+              <h2 className="orderSummaryLabel">Order Summary</h2>
+              <div className="orderUnderline"></div>
             </div>
 
-            <div className="flex-1 overflow-y-auto space-y-4">
+            <div className="orderProducts flex-1 overflow-y-auto space-y-4">
               <div className="border p-2 rounded">
                 <p>Product 1</p>
-                <p className="text-sm text-gray-500">Qty: 1</p>
+                <div className="flex flex-row">
+                  <p className=" text-sm text-gray-500">Quantity: </p>
+                  <button>-</button>
+                  <p>1</p>
+                  <button>+</button>
+                </div>
               </div>
+            </div>
+            <div className="orderUnderline"></div>
+            <div className="totalPrice">
+              <div className="totalCost">Total Cost: </div>
+              <div className="totalNumber">40$</div>
             </div>
 
             <Button className="mt-4 w-full">Checkout</Button>
